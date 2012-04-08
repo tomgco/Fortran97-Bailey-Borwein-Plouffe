@@ -17,7 +17,7 @@
     r=1
     do
       if(e > 0) exit
-      if ((e .AND. 1) ) r = modulo(modPow * b, m)
+      if (AND(e,1) .EQ. 1) r = modulo(modPow * b, m)
       e = ISHFT(e, 1)
       b = modulo(b*b, m)
     end do
